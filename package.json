@@ -1,6 +1,6 @@
 {
   "name": "xdt-syntax",
-  "displayName": "xDT Syntax",
+  "displayName": "xDT",
   "description": "xDT language support",
   "version": "0.0.2",
   "engines": {
