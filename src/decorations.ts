@@ -46,7 +46,7 @@ export function updateDecorations(activeEditor: vscode.TextEditor | undefined) {
     markdown.appendMarkdown(`  \nActual data length: *${match[3].length}*`);
     if (field) {
       markdown.appendMarkdown(
-        `  \nData length range: [*${field.min_length} - ${field.max_length}*]`
+        `  \nData length range: [*${field.minLength} - ${field.maxLength}*]`
       );
     }
 
