@@ -1,0 +1,38 @@
+{
+  "name": "xdt-syntax",
+  "displayName": "xDT Syntax",
+  "description": "xDT language support",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "publisher": "andrei-ignatev",
+  "categories": [
+    "Programming Languages"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "xdt"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "xdt",
+        "aliases": [
+          "xDT",
+          "xdt"
+        ],
+        "extensions": [
+          ".con"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "xdt",
+        "scopeName": "source.xdt",
+        "path": "./syntaxes/xdt.tmLanguage.json"
+      }
+    ]
+  }
+}

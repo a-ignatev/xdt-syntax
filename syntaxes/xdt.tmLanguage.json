@@ -1,0 +1,26 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "xDT",
+	"patterns": [
+		{
+			"include": "#xdtline"
+		}
+	],
+	"repository": {
+		"xdtline": {
+			"match": "^(\\d{3})(\\d{4})(.*)$",
+			"captures": {
+				"1": {
+					"name": "comment.line"
+				},
+				"2": {
+					"name": "keyword.control"
+				},
+				"3": {
+					"name": "string.other"
+				}
+			}
+		}
+	},
+	"scopeName": "source.xdt"
+}
