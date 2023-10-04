@@ -18,6 +18,10 @@
   "activationEvents": [
     "onLanguage:xdt"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a-ignatev/xdt-syntax.git"
+  },
   "contributes": {
     "languages": [
       {
