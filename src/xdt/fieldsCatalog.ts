@@ -1,11 +1,10 @@
-export const fieldsCatalog: Record<
-  string,
-  {
-    name: string;
-    minLength?: number;
-    maxLength?: number;
-  }
-> = {
+export type Field = {
+  name: string;
+  minLength?: number;
+  maxLength?: number;
+};
+
+export const fieldsCatalog: Record<string, Field> = {
   "0102": {
     name: "Softwareverantwortlicher (SV)",
     minLength: 0,
