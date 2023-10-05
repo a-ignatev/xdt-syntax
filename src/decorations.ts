@@ -21,7 +21,7 @@ export function updateDecorations(activeEditor: vscode.TextEditor | undefined) {
     return;
   }
 
-  const regEx = /(\d{3})(\d{4})(.*)/g;
+  const regEx = /^(\d{3})(\d{4})(.*)/gm;
   const text = activeEditor.document.getText();
   const lines: vscode.DecorationOptions[] = [];
   const lineParts: vscode.DecorationOptions[] = [];

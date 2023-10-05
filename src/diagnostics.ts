@@ -3,7 +3,7 @@ import { fieldsCatalog } from "./fieldsCatalog";
 
 const LENGTH_LENGTH = 3;
 const ID_LENGTH = 4;
-const CARRIAGE_RETURN_LENGTH = 2;
+export const CARRIAGE_RETURN_LENGTH = 2;
 
 class FixableDiagnostic extends vscode.Diagnostic {
   public fix!: number;
@@ -20,7 +20,7 @@ export class Diagnostics {
   ): void {
     collection.clear();
     const errors: FixableDiagnostic[] = [];
-    const regEx = /(\d{3})(\d{4})(.*)/g;
+    const regEx = /^(\d{3})(\d{4})(.*)/gm;
     const text = document.getText();
     let match;
 
