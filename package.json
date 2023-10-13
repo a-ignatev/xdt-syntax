@@ -32,7 +32,9 @@
           "xdt"
         ],
         "extensions": [
-          ".con"
+          ".con",
+          ".gdt",
+          ".vik"
         ]
       }
     ],
