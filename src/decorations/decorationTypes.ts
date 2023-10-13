@@ -4,7 +4,7 @@ export const xdtLineInfoDecorationType =
   vscode.window.createTextEditorDecorationType({
     after: {
       color: "gray",
-      margin: "10px",
+      margin: "24px",
     },
   });
 
@@ -12,5 +12,6 @@ export const xdtLinePartDecorationType =
   vscode.window.createTextEditorDecorationType({
     after: {
       contentText: " ",
+      margin: "-2px",
     },
   });
