@@ -1,10 +1,7 @@
 import * as vscode from "vscode";
 import { Field } from "../xdt/fieldsCatalog";
 import { forEachXdtLine, getDataLength } from "../xdt/xdtHelpers";
-import {
-  xdtLineInfoDecorationType,
-  xdtLinePartDecorationType,
-} from "./decorationTypes";
+import { xdtLineInfoDecorationType } from "./decorationTypes";
 
 export class Decorations {
   updateDecorations(activeEditor: vscode.TextEditor | undefined) {
@@ -13,7 +10,6 @@ export class Decorations {
     }
 
     const lines: vscode.DecorationOptions[] = [];
-    const lineParts: vscode.DecorationOptions[] = [];
 
     forEachXdtLine(
       activeEditor.document,
@@ -34,23 +30,10 @@ export class Decorations {
             },
           },
         });
-        lineParts.push({
-          range: new vscode.Range(
-            startPos,
-            new vscode.Position(startPos.line, startPos.character + 3)
-          ),
-        });
-        lineParts.push({
-          range: new vscode.Range(
-            new vscode.Position(startPos.line, startPos.character + 3),
-            new vscode.Position(startPos.line, startPos.character + 7)
-          ),
-        });
       }
     );
 
     activeEditor.setDecorations(xdtLineInfoDecorationType, lines);
-    activeEditor.setDecorations(xdtLinePartDecorationType, lineParts);
   }
 
   private createMarkdown(
@@ -68,7 +51,7 @@ export class Decorations {
     markdown.appendMarkdown(`  \nData length: *${getDataLength(lineLength)}*`);
     markdown.appendMarkdown(`  \nActual data length: *${data.length}*`);
 
-    if (field) {
+    if (field?.minLength || field?.maxLength) {
       markdown.appendMarkdown(
         `  \nData length range: [*${field.minLength} - ${field.maxLength}*]`
       );

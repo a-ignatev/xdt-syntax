@@ -36,9 +36,8 @@ export class Diagnostics {
         }
 
         if (
-          field !== undefined &&
-          field.minLength !== undefined &&
-          field.maxLength !== undefined &&
+          field &&
+          (field.minLength !== 0 || field.maxLength !== 0) &&
           (realDataLength < field.minLength || realDataLength > field.maxLength)
         ) {
           errors.push(this.createXdtDataLengthError(field, startPos, endPos));
