@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/a-ignatev/xdt-syntax/compare/v0.0.4...v0.0.5) (2023-11-08)
+
+
+### Features
+
+* update fields catalog, update styles ([2ddb02e](https://github.com/a-ignatev/xdt-syntax/commit/2ddb02e800364641f0cf6ec1b0961594bbd06b52))
+
 ### [0.0.4](https://github.com/a-ignatev/xdt-syntax/compare/v0.0.3...v0.0.4) (2023-10-13)
 
 
